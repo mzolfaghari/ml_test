@@ -134,7 +134,6 @@ jobs:
         run: |
           sam package \
             --image-repository ${TESTING_IMAGE_REPOSITORY} \
-            --s3-bucket ${TESTING_ARTIFACTS_BUCKET} \
             --region ${TESTING_REGION} \
             --output-template-file packaged-testing.yaml
 
