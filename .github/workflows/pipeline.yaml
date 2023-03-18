@@ -133,7 +133,7 @@ jobs:
       - name: Upload artifacts to testing artifact buckets
         run: |
           sam package \
-            --resolve-image-repos \
+            --resolve-s3 \
             --region ${TESTING_REGION} \
             --output-template-file packaged-testing.yaml
 
