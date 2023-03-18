@@ -134,6 +134,7 @@ jobs:
         run: |
           sam package \
             --resolve-s3 \
+            --resolve-image-repos \
             --region ${TESTING_REGION} \
             --output-template-file packaged-testing.yaml
 
