@@ -193,7 +193,7 @@ jobs:
 
       - name: Deploy to testing account
         run: |
-          sam deploy --stack-name ${TESTING_STACK_NAME} \
+          sam deploy --no-confirm-changeset --stack-name ${TESTING_STACK_NAME} \
             --template packaged-testing.yaml \
             --capabilities CAPABILITY_IAM \
             --region ${TESTING_REGION} \
@@ -238,7 +238,7 @@ jobs:
 
       - name: Deploy to production account
         run: |
-          sam deploy --stack-name ${PROD_STACK_NAME} \
+          sam deploy --no-confirm-changeset --stack-name ${PROD_STACK_NAME} \
             --template packaged-prod.yaml \
             --capabilities CAPABILITY_IAM \
             --region ${PROD_REGION} \
